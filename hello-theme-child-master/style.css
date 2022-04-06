@@ -1,5 +1,5 @@
 /* 
-Theme Name: Hello Elementor Child
+Theme Name: Hold Fast Social Club (Hello Elementor)
 Theme URI: https://github.com/elementor/hello-theme/
 Description: Hello Elementor Child is a child theme of Hello Elementor, created by Elementor team
 Author: Elementor Team
@@ -11,7 +11,310 @@ License: GNU General Public License v3 or later.
 License URI: https://www.gnu.org/licenses/gpl-3.0.html
 Tags: flexible-header, custom-colors, custom-menu, custom-logo, editor-style, featured-images, rtl-language-support, threaded-comments, translation-ready
 */
+h3 {
+	margin-top: 1em;;
+	margin-bottom: 0.15em;
+	font-size: 22px !important;
+}
 
-/*
-    Add your custom styles here
-*/
+/* Custom image gallery */
+
+.shop-gallery {
+	height: calc(100vh - 200px);
+}
+.shop-gallery .elementor-widget-container {
+	height: 100%;
+}
+.custom_img_gallery {
+    margin-right: -5px;
+	height: 100%;
+}
+.custom_img_gallery img  {
+    width: calc(50% - 5px);
+    max-width: calc(50% - 5px);
+    object-fit: cover;
+    -webkit-filter: grayscale(100%);
+    -webkit-transition : -webkit-filter 300ms linear;
+    margin-right: 5px;
+}
+
+.custom_img_gallery.one_image_row img  {
+	width: calc(100% - 5px);
+	max-width: calc(100% - 5px);
+}
+
+.custom_img_gallery.one_image_row img, .custom_img_gallery.two_image_rows img {
+	height: 50%;
+}
+
+.custom_img_gallery.three_image_rows img {
+	height: 33%;
+}
+
+.custom_img_gallery img:hover  {
+    -webkit-filter: grayscale(0%);
+    -webkit-transition : -webkit-filter 300ms linear
+}
+
+/* convention images */
+.elementor-widget-image a {
+	display: block;
+}
+
+/* main page styles */
+.main-form button {
+	margin-left: 10px;
+}
+
+.sign-up-button .elementor-button-link {
+	width: 100%;
+}
+
+.search-bar label {
+	width: calc(100% - 100px);
+}
+
+/* calendar colors */
+.wpsbc-container.wpsbc-calendar-1 .wpsbc-legend-item-icon-1 div:first-of-type {
+    background-color: #8eb779 !important;
+}
+
+.wpsbc-container.wpsbc-calendar-1 .wpsbc-legend-item-icon-2 div:first-of-type {
+    background-color: #df2b2b !important;
+}
+
+.wpsbc-container.wpsbc-calendar-1 .wpsbc-legend-item-icon-3 div:first-of-type {
+    background-color: #ffce5a !important;
+}
+
+.wpsbc-container .wpsbc-calendars .wpsbc-calendar table tr td .wpsbc-date-inner .wpsbc-date-number {
+	font-weight: bold;
+	font-size: 16px;
+}
+
+/* search results custom post types */
+.elementor-posts--thumbnail-left .elementor-post__thumbnail__link {
+	margin-left: 0 !important;
+	width: 33% !important;
+}
+
+.elementor-posts--thumbnail-left .elementor-post__thumbnail__link .elementor-post__thumbnail {
+	padding-bottom: 0 !important;
+	height: 100%;
+}
+.elementor-posts--thumbnail-left .elementor-post__thumbnail__link img, .elementor-posts--thumbnail-right .elementor-post__thumbnail__link img {
+	position: initial !important;
+    transform: initial !important;
+    height: 100% !important;
+	width: 100% !important;
+    object-fit: cover;
+}
+.elementor-posts--thumbnail-right .elementor-post__thumbnail__link {
+	margin-left: 0 !important;
+	width: 33% !important;
+}
+
+.elementor-posts--thumbnail-right .elementor-post__thumbnail__link .elementor-post__thumbnail {
+	padding-bottom: 0 !important;
+	height: 100%;
+}
+
+.elementor-post__read-more {
+	background: var( --e-global-color-primary );
+	padding: 10px 20px;
+	display: block;
+	width: fit-content;
+	border: 2px solid  var( --e-global-color-primary );
+}
+.elementor-post__read-more:hover {
+	border: 2px solid  var( --e-global-color-2aa31b0 );
+	color: var( --e-global-color-2aa31b0 ) !important;
+	background: transparent;
+}
+
+/*FacetWP filter titles */
+.facetwp-facet > .facetwp-checkbox {
+	color: var( --e-global-color-primary );
+    font-family: var( --e-global-typography-primary-font-family ), Sans-serif;
+    font-weight: var( --e-global-typography-primary-font-weight );
+	font-size: 1.2rem;
+	background: transparent;
+	padding-left: 0;
+}
+.facetwp-facet > .facetwp-checkbox.checked {
+	background: transparent;
+}
+
+/* FacetWP search bar */
+.facetwp-input-wrap {
+	width: 100%;
+}
+
+.facetwp-facet-studio_search .facetwp-icon {
+	opacity: 1;
+}
+
+.facetwp-facet-studio_search .facetwp-icon:before {
+    display: inline-block;
+    content: 'Search';
+    width: 100px;
+    height: 100%;
+    background: none;
+    background: var(--e-global-color-primary);
+    z-index: 999;
+    color: white;
+    padding-top: 13px;
+    padding-left: 24px;
+    font-style: normal;
+	font-family: var( --e-global-typography-primary-font-family ), Sans-serif;
+	border: 2px solid var(--e-global-color-primary);
+}
+.facetwp-facet-studio_search .facetwp-icon:hover:before {
+	background: white;
+	color: var(--e-global-color-primary);
+}
+
+.facetwp-facet-studio_search .facetwp-facet input.facetwp-search input {
+	width: calc(100% - 100px);
+}
+
+@media (min-width: 449px) {
+	.studio-search-bar {
+		width: calc(100% - 157px) !important;
+		margin-right: 10px;
+	}
+	.reset-search {
+		margin-top: 40px;
+		height: 42px;
+	}
+}
+
+@media (max-width: 448px) {
+	.studio-search-bar {
+		height: 90px;
+	}
+	.reset-search {
+		margin-bottom: 20px;
+	}
+}
+
+
+/* main search */
+.manual-search input {
+	width: calc(100% - 150px);
+}
+@media(max-width: 448px) {
+	.manual-search input {
+		width: 100%;
+	}
+	.manual-search button {
+		width: 100%;
+		margin-top: 10px;
+	}
+}
+
+/* Favourite Icon */
+.favourites-icon-container {
+    display: flex;
+    align-items: center;
+    margin-left: 10px;
+}
+
+.ccc-favorite-post-toggle {
+	width: fit-content;
+}
+
+.ccc-favorite-post-toggle-button::before {
+	font-size: 35px
+}
+
+/* edit post link */
+.post-edit-link {
+	color: white;
+	font-family: var( --e-global-typography-secondary-font-family ), Sans-serif;
+    font-weight: var( --e-global-typography-secondary-font-weight );
+	display: block;
+    margin-top: -32px;
+}
+
+.post-edit-link:hover {
+	color: var( --e-global-color-2aa31b0 );
+}
+
+
+/* gravity  forms */
+.gfield_description {
+    font-style: italic;
+    margin-bottom: 20px;
+}
+
+.gform_wrapper.gravity-theme .ginput_complex label {
+	padding-top: 0 !important;
+	padding-bottom: 5px !important;
+	font-style: italic;
+}
+
+/* Detail pages */
+.elementor-icon-list-item.anchor-list {
+    margin-left: 15px;
+}
+
+/* artist and shop social icons */
+.social-custom {
+    font-family: var( --e-global-typography-primary-font-family ), Sans-serif;
+    font-weight: var( --e-global-typography-primary-font-weight );
+}
+
+.social-custom a {
+	font-size: 20px !important;
+}
+
+.social-custom a:hover {
+	color: var( --e-global-color-2aa31b0 );
+}
+
+.artist-social-list {
+	display: block !important;
+	margin-left: 15px !important;
+}
+
+/* facetwp map filtering */
+.facetwp-map-filtering { 
+    display: none; 
+}
+
+.facetwp-facet.facetwp-type-proximity {
+	display: flex;
+}
+
+/* artist profile img */
+.featurede-artist-img div {
+	height: 100%;
+}
+
+.featurede-artist-img img {
+	height: 100%;
+	object-fit: cover;
+}
+
+/* dark background styles */
+.dark-bg p, .dark-bg li, .dark-bg .elementor-icon-list-item a {
+	color: white;
+}
+.elementor-icon-list-item a:hover {
+	color:  var( --e-global-color-2aa31b0 );
+}
+
+.dark-bg h2, .dark-bg h3 {
+	color: var( --e-global-color-2aa31b0 )
+}
+
+/* account activated page */
+.account-activated {
+	text-align: center;
+    padding: 40px;
+    min-height: 50vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
