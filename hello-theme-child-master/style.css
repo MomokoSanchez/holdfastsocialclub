@@ -17,6 +17,14 @@ h3 {
 	font-size: 22px !important;
 }
 
+/* shop logo */
+.studioLogo {
+	max-width: 50% !important;
+	float: left;
+    margin: 0 20px 5px 0;
+	max-height: 30vh;
+}
+
 /* Custom image gallery */
 
 .shop-gallery {
@@ -278,6 +286,10 @@ h3 {
 	margin-left: 15px !important;
 }
 
+.artist-social {
+	margin-left: 0;
+}
+
 /* facetwp map filtering */
 .facetwp-map-filtering { 
     display: none; 
@@ -295,6 +307,7 @@ h3 {
 .featurede-artist-img img {
 	height: 100%;
 	object-fit: cover;
+	max-height: 500px;
 }
 
 /* dark background styles */
@@ -317,4 +330,18 @@ h3 {
     display: flex;
     flex-direction: column;
     justify-content: center;
+}
+
+/* adjust question orders */
+#input_1_36 {
+	display: grid;
+}
+
+#input_1_36 .gchoice_1_36_1 {
+	order: 10;
+}
+
+/* user website field - hide */
+fieldset.fieldset-user_website, fieldset.fieldset-user_cover, .fieldset-user_description {
+	display: none;
 }

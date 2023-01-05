@@ -4055,25 +4055,35 @@
 	  instances.push(instance);
 	  return instance;
 	};
+	
+	var isPwProtect = document.getElementsByClassName('post-password-form');
+	if (isPwProtect.length > 0) {
+		var headers = document.getElementsByTagName('h2');
+		for (var i = 0; i<headers.length; i++) {
+			headers[i].style.display = "none";
+		}
+	}
 
 }());
 
 document.addEventListener("DOMContentLoaded", function(event) { 
     Chocolat(document.querySelectorAll('.chocolat-parent .chocolat-image'));
-	console.log("this:"+document.getElementById("nostudios").parentElement.childElementCount);
 	
 	if(document.getElementById("nostudios").parentElement.childElementCount !== 1){
 			document.getElementById("nostudios").innerHTML = "";
 	};
+
+	setTimeout(function() {
+		var homeLink = document.getElementsByClassName('edit-post-fullscreen-mode-close')[0];
+		homeLink && homeLink.attributes.href == "#";
+		console.log("when");
+	},1500);
 })
 
 
 document.addEventListener('facetwp-loaded', function() {
-	console.log("refreshh");
-	console.log(document.getElementById("nostudios").parentElement.childElementCount);
 	if(document.getElementById("nostudios").parentElement.childElementCount !== 1){
 		document.getElementById("nostudios").innerHTML = "";
-		console.log("why");
 	};
  });
     
